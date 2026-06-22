@@ -176,9 +176,19 @@ huggingface/
 *.ckpt
 *.safetensors
 *.engine
+*.trt
 !decoupled_wbc/sim2mujoco/resources/robots/g1/policy/GR00T-WholeBodyControl-Balance.onnx
 !decoupled_wbc/sim2mujoco/resources/robots/g1/policy/GR00T-WholeBodyControl-Walk.onnx
-!motionbricks/out/**/*.ckpt
+
+# Local generated/downloaded artifacts. Recreate these with the project setup
+# scripts instead of committing them to this fork.
+motionbricks/out/
+gear_sonic_deploy/build/
+gear_sonic_deploy/target/
+gear_sonic_deploy/planner/
+gear_sonic_deploy/policy/release/*.onnx
+gear_sonic_deploy/policy/release/*.trt
+gear_sonic_deploy/reference/recorded_motion/
 
 
 # Mujoco
